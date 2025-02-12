@@ -183,7 +183,7 @@ jobs:
 
       - name: Create WASI hint file
         shell: bash
-        run: sed -e "s&\\\${{ github\\.workspace }}&${{ github\\.workspace }}&g" < tools/hintfile_wasi_template.sh > hintfile_wasi.sh
+        run: true && sed -e "s&\\\${{ github\\.workspace }}&${{ github\\.workspace }}&g" < tools/hintfile_wasi_template.sh > hintfile_wasi.sh
 
       - name: Install Perl (WASI build)
         shell: bash
